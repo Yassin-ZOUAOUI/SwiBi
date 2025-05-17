@@ -1,0 +1,25 @@
+import { Metadata } from "next";
+import ProfileSetupForm from "@/components/profile/profile-setup-form";
+
+export const metadata: Metadata = {
+  title: "Profile Setup - SwiBi",
+  description: "Set up your SwiBi profile",
+};
+
+export default function ProfileSetupPage() {
+  return (
+    <div className="container flex h-screen w-screen flex-col items-center justify-center">
+      <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+        <div className="flex flex-col space-y-2 text-center">
+          <h1 className="text-2xl font-semibold tracking-tight">
+            Complete Your Profile
+          </h1>
+          <p className="text-sm text-muted-foreground">
+            Please provide your details to complete your profile
+          </p>
+        </div>
+        <ProfileSetupForm />
+      </div>
+    </div>
+  );
+} 
